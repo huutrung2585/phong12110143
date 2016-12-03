@@ -1,25 +1,288 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8118" systemVersion="15A172" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BV1-FR-VrT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8098"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="PhongUTE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundP" translatesAutoresizingMaskIntoConstraints="NO" id="2rP-Il-6OX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FRUIT FOR STUDY" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83e-xe-AKa">
+                                <rect key="frame" x="67" y="112" width="217" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBP-Vp-cDt">
+                                <rect key="frame" x="129" y="300" width="93" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <segue destination="MLw-i6-wIL" kind="modal" id="e4X-ta-lJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="218" y="313"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mlx-WE-DWO">
+            <objects>
+                <viewController id="MLw-i6-wIL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Trm-se-diI"/>
+                        <viewControllerLayoutGuide type="bottom" id="7gc-z9-5TM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JuQ-Wp-fC7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundP" translatesAutoresizingMaskIntoConstraints="NO" id="gfM-VR-85k">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="LEVEL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLX-cf-ecK">
+                                <rect key="frame" x="112" y="115" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LL-9A-TG4">
+                                <rect key="frame" x="109" y="214" width="103" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Level 1"/>
+                                <connections>
+                                    <segue destination="A0F-Fm-lDL" kind="modal" id="CkU-cf-qAZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-R9-gaR">
+                                <rect key="frame" x="117" y="311" width="87" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Level 2"/>
+                                <connections>
+                                    <segue destination="geO-Hr-SQR" kind="modal" id="EP7-zb-f7U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7v-8y-PTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="313"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kmo-qa-29T">
+            <objects>
+                <viewController id="A0F-Fm-lDL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sfq-tf-KQn"/>
+                        <viewControllerLayoutGuide type="bottom" id="qCP-4Q-n4q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vsc-vV-Va5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundP" translatesAutoresizingMaskIntoConstraints="NO" id="eXi-mJ-3yw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BANANA" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qgt-O9-toQ">
+                                <rect key="frame" x="90" y="101" width="141" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeR-zB-Cys">
+                                <rect key="frame" x="32" y="212" width="115" height="101"/>
+                                <state key="normal" title="Button" image="bananaP"/>
+                                <connections>
+                                    <segue destination="geO-Hr-SQR" kind="modal" id="58N-rG-9Gm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4K-bO-cvm">
+                                <rect key="frame" x="155" y="212" width="138" height="113"/>
+                                <state key="normal" title="Button" image="mango"/>
+                                <connections>
+                                    <segue destination="ynU-I2-G20" kind="modal" id="aIz-In-GDm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMZ-8D-utZ">
+                                <rect key="frame" x="166" y="349" width="116" height="116"/>
+                                <state key="normal" title="Button" image="appleP"/>
+                                <connections>
+                                    <segue destination="ynU-I2-G20" kind="modal" id="D4v-Ih-afZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bko-Hc-Sl7">
+                                <rect key="frame" x="32" y="359" width="130" height="95"/>
+                                <state key="normal" title="Button" image="orange"/>
+                                <connections>
+                                    <segue destination="ynU-I2-G20" kind="modal" id="TDx-Zr-WAu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwb-Pm-186" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="319"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ggN-Ow-X10">
+            <objects>
+                <viewController id="geO-Hr-SQR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pzo-8i-jCM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Idz-Y0-lGF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jNb-sQ-Jya">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundP" translatesAutoresizingMaskIntoConstraints="NO" id="pqy-mb-6zk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usY-7r-Dr9">
+                                <rect key="frame" x="155" y="203" width="135" height="112"/>
+                                <state key="normal" title="Button" image="pinearpleP"/>
+                                <connections>
+                                    <segue destination="ynU-I2-G20" kind="modal" id="kh5-Hm-W1w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzP-q9-A8m">
+                                <rect key="frame" x="38" y="321" width="128" height="103"/>
+                                <state key="normal" title="Button" image="stawbery"/>
+                                <connections>
+                                    <segue destination="NFn-gX-xMj" kind="modal" id="77T-0M-U5I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnf-Lg-tTS">
+                                <rect key="frame" x="159" y="336" width="126" height="88"/>
+                                <state key="normal" title="Button" image="pearl"/>
+                                <connections>
+                                    <segue destination="ynU-I2-G20" kind="modal" id="1sk-EB-dsV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-ao-dWF">
+                                <rect key="frame" x="33" y="198" width="114" height="121"/>
+                                <state key="normal" title="Button" image="watermelon8"/>
+                                <connections>
+                                    <segue destination="ynU-I2-G20" kind="modal" id="8gy-tV-wZn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="STRAWBERY" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYM-6u-1Oe">
+                                <rect key="frame" x="86" y="107" width="148" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imM-fG-bAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="313"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DdU-Bd-ITd">
+            <objects>
+                <viewController id="ynU-I2-G20" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZA1-Fu-Agk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vaj-qo-DAT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YQv-VD-jVc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundP" translatesAutoresizingMaskIntoConstraints="NO" id="hvv-Fu-216">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="578"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FAIL!!!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZo-TW-BRD">
+                                <rect key="frame" x="102" y="107" width="116" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INR-Rb-IxK">
+                                <rect key="frame" x="26" y="291" width="269" height="30"/>
+                                <state key="normal" title="RETURN TO MAIN MENU"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="modal" id="lc6-p4-mvV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzp-2p-HCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="945"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xex-GB-UxR">
+            <objects>
+                <viewController id="NFn-gX-xMj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WO8-Js-LIi"/>
+                        <viewControllerLayoutGuide type="bottom" id="zbb-p0-k3z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nLI-n9-3Wf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundP" translatesAutoresizingMaskIntoConstraints="NO" id="gda-0o-Arn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-6g-cFb">
+                                <rect key="frame" x="48" y="299" width="243" height="30"/>
+                                <state key="normal" title="RETURN TO MAIN MENU"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="modal" id="Tfc-1e-pdA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CONGRATULATION!!!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yw-9c-uBR">
+                                <rect key="frame" x="54" y="115" width="237" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tyk-aY-sPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1246" y="947"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appleP" width="208" height="208"/>
+        <image name="backgroundP" width="1300" height="1300"/>
+        <image name="bananaP" width="600" height="445"/>
+        <image name="mango" width="225" height="225"/>
+        <image name="orange" width="235" height="234"/>
+        <image name="pearl" width="205" height="235"/>
+        <image name="pinearpleP" width="240" height="240"/>
+        <image name="stawbery" width="200" height="200"/>
+        <image name="watermelon8" width="800" height="800"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tfc-1e-pdA"/>
+        <segue reference="EP7-zb-f7U"/>
+        <segue reference="kh5-Hm-W1w"/>
+    </inferredMetricsTieBreakers>
 </document>
